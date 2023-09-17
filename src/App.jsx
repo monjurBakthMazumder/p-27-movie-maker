@@ -11,6 +11,7 @@ function App() {
   const handleRemoveChose = team => {
     const removed = choses.filter(item=> item.id !== team.id)
     setChoses(removed);
+    setCost(cost - team.salary)
     toast.success(`Successfully Removed ${team.name}`, {
       position: "top-center",
       autoClose: 1000,
